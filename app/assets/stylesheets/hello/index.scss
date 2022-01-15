@@ -1,0 +1,151 @@
+.hello_page{
+    width: 100%;
+    .first_box{
+        width: 1441px;
+        height: 445px;
+        background-color: #F8F1E5;
+        padding-top: 74px;
+        .message_box{
+            width: 537px;
+            height: 130px;
+            margin: auto;
+            
+            font-size: 48px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .button_box{
+            width: 149px;
+            height: 146px;
+            margin: auto;
+            margin-top: 81px;
+            .post_box{
+                width: 149px;
+                height: 44px;
+                .button{
+                    width: 149px;
+                    height: 44px;
+                    background-color: #F9BA32;
+                    border-radius: 10px;
+                    border: 2px solid #F9BA32;
+                }
+                .button:hover{
+                    background-color: #fff;
+                    border-color: #F9BA32;
+                    color: #F9BA32;
+                    transition: all 0.2s;
+                }
+            }
+            .login_box{
+                width: 149px;
+                height: 44px;
+                margin-top: 58px;
+                .button{
+                    width: 149px;
+                    height: 44px;
+                    background-color: #F9BA32;
+                    border: 0px none;
+                    border-radius: 10px;
+                    border: 2px solid #F9BA32;
+                }
+                .button:hover{
+                    background-color: #fff;
+                    border-color: #F9BA32;
+                    color: #F9BA32;
+                    transition: all 0.2s;
+                }
+            }
+        }
+    }
+    .second_box{
+        width: 1441px;
+        height: 475px;
+        background-color: white;
+        .background_box{
+            width: 1000px;
+            height: 417px;
+            display: flex;
+            position: relative;
+            margin-left: 368px;
+            margin-top: 44px;
+            .icon_box{
+                width: 461px;
+                height: 113px;
+                display: flex;
+                position: absolute;
+                top: 226px;
+                left: -300px;
+                .image_box{
+                    width: 114x;
+                    height: 101px;
+                }
+                .title_box{
+                    width: 350px;
+                    height: 101px;
+    
+                    font-size: 96px;   
+                    line-height: 101px;
+                    text-align: center;        
+                }
+            }
+            .jpeg_box{
+                width: 1073px;
+                height: 417px;
+            }
+        }
+        
+    }
+    .third_box{
+        width: 1441px;
+        height: 519px;
+        background-color: #426E86;
+        padding-top: 68px;
+        .title{
+            width: 660px;
+            height: 56px;
+            margin: auto;
+            text-align: center;
+            font-size: 48px;
+            color: white;
+            letter-spacing: 2px;
+        }
+        .comment1{
+            width: 1441px;
+            height: 58px;            
+            margin: auto; 
+            text-align: center;  
+            margin-top: 65px;
+            font-size: 16px;    
+            color: white;
+        }
+        .comment2{
+            width: 300px;
+            height: 90px;
+            margin: auto;
+            text-align: center;
+            margin-top: 37px;
+            font-size: 16px;
+            color: white;
+        }
+        .button_box{
+            width: 149px;
+            height: 44px; 
+            margin: auto;
+            margin-top: 65px;
+            .button{
+                width: 149px;
+                height: 44px; 
+                background-color: #F9BA32;
+                border: 0px none;
+                border-radius: 10px;
+                border: 2px solid #F9BA32;
+            }
+            .button:hover{
+                background-color: #fff;
+                border-color: #F9BA32;
+                color: #F9BA32;
+                transition: all 0.2s;
+            }
+        }
+    }
+}

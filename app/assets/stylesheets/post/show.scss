@@ -1,0 +1,91 @@
+.show_page{
+    width: 100%;
+    background-color: #F8F1E5;
+    .post{
+        width: 1440px;
+        .user_box{
+            width: 1440px;
+            height: 90px;      
+            padding-top: 20px;
+            .user_field{
+                width: 918px;
+                height: 72px;
+                display: flex;
+                margin: auto;
+                .image_box{
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;    
+                    background-color: white;
+                    .rounded-circle{
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                .info_box{
+                    width: 870px;
+                    height: 72px;
+                    padding-left: 20px;
+                }
+            }
+        }
+        .post_box{
+            width: 1440px;
+            .doc_box{
+                width: 918px;
+                margin-left: 326px;
+            }
+            .image_box{
+                margin-left: 326px;
+                margin-top: 15px;
+            }
+            .heart_box{
+                width: 1055px;
+                height: 35px;
+                margin-left: 326px;
+            }
+        }
+    }
+    .comment{
+        width: 1440px;
+        .comment-wrapper{
+            width: 1128px;
+            margin-left: 260px;
+            .comment_history{
+                width: 1128px;
+                font-size: 16px;
+                display: flex;
+                .image_box{
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 24px;    
+                    background-color: white;
+                }
+                .comment_field{
+                    width: 1060px;
+                    padding-left: 20px;
+                    .user_box{
+                        width: 1060px;
+                        height: 65px;  
+                        font-size: 16px;    
+                    }
+                    .comment{
+                        width: 1060px;
+                        padding-left: 20px;
+                    }
+                }         
+            }
+            .create_comment{
+                width: 1080px;
+                height: 73px;
+                margin-top: 48px;
+                .form{
+                    width: 325px;
+                    height: 71px;
+                    background-color: white;
+                    border: 0px none;
+                }
+            }
+        }
+    }
+}

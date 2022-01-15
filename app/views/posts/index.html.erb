@@ -1,0 +1,74 @@
+
+<% if user_signed_in? %>
+    <% if current_user.admin? %>
+        <%= link_to "秘密のページへ", users_path %>
+    <% end %>
+<% end %>
+
+<div class="question_area">
+    <div class="question_box">
+        <div class="question_field">
+                <div class="search_box">
+                    <%= form_tag( {controller:"posts", action:"index"}, method: :get) do %>
+                    <%= text_field_tag :search, '', :placeholder => "キーワード検索", class: "search" %>
+                </div>
+                <div class="search_button">
+                    <%= submit_tag '検索', class: "search_button" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+<div class="post-container">
+    <div class="post_area">
+    <div class="post_content">
+        <% @posts.each do |p| %>
+            <div class="post">
+                <div class="image">
+                    <p><%= image_tag p.image_url, class: "img", size: "280x280" if p.image? %></p>
+                </div>
+                <div class="post_box">
+                    <div class="user_post">
+                        <a href="/users/<%= p.user.id %>"><%= p.user.name %></a>
+                        <p class="genre"><%= p.genre %></p>
+                        <p><%= p.title %></p>
+                        <p><%= p.question %></p>
+                        <p><%= image_tag p.image_url, size: "250x200" if p.image? %></p>
+                    </div>
+                    <div class="button_box">
+                    <% if user_signed_in? %>
+                    <% if current_user.already_liked?(p) %>
+                        <%= link_to post_like_path(id: p.id, post_id: p.id), method: :delete do %>
+                            <i class="fas fa-heart"></i><%= p.likes.count %>
+                        <% end %>
+                    <% else %>
+                        <%= link_to post_likes_path(id: p.id, post_id: p.id), method: :post do %>
+                            <i class="far fa-heart"></i><%= p.likes.count %>
+                        <% end %>
+                    <% end %>
+                    <% else %>
+                    <i class="far fa-heart"></i><%= p.likes.count %>
+                    <% end %>
+                        <%= link_to "詳細へ", post_path(p.id), class: "button" %>
+                        <% if user_signed_in? && current_user.id == p.user_id %>
+                        <%= link_to "編集する", edit_post_path(p.id), class: "button" %>
+                        <%= link_to "削除する", post_path(p.id), method: :delete, class: "button" %>
+                        <p><%= l p.updated_at %></p>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+            <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                    <%= link_to "管理者用編集", edit_post_path(p.id) %>
+                    <%= link_to "管理者用削除", post_path(p.id), method: :delete %>
+                <% end %>
+            <% end %>
+        <% end %>
+        </div>  
+        <%= paginate @posts %>
+    </div>
+</div>
+
+
+

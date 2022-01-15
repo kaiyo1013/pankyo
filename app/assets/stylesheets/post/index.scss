@@ -1,0 +1,114 @@
+.question_area{
+    width: 1440px;
+    height: 70px;
+    background-color: #F8F1E5;
+    .question_box{
+        width: 1440px;
+        height: 37px;
+        background-color: #F9BA32;
+        padding-top: 5px;
+        .question_field{
+            width: 361px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .search_box{
+                width: 177px;
+                height: 36px;
+                .search{
+                    width: 169px;
+                    height: 23px;
+                    border-radius: 10px;
+                    border: 0px none;
+                }
+            }
+            .search_button{
+                width: 109px;
+                height: 36px;
+                .search_button{
+                    width: 109px;
+                    height: 26px;
+                    background-color: #2F3131;
+                    color: white;
+                    font-size: 16px;
+                    border-radius: 10px;
+                    border: 2px solid #2F3131;
+                }
+                .search:hover{
+                    background-color: #fff;
+                    border-color: #2F3131;
+                    color: #2F3131;
+                }
+            }
+        }
+    }
+}
+.post-container{
+    width: 1439px;
+    height: 2000px;  
+    background-color: #F8F1E5;
+    padding-top: 22px;
+    .post_area{
+        width: 605px;
+        background-color: white;
+        margin: auto;
+        padding-top: 19px;    
+        }
+        .post_content{
+            width: 600px;
+            border-radius: 10px;
+            margin: auto;
+            .post{
+                border-top: solid 1px #C4C4C4;
+                display: flex;
+                .image{
+                    width: 50px;
+                    height: 50px;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    border-radius: 50%;
+                    .img{
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                .post_box{
+                    margin-left: 10px;
+                    .user_post{
+                        a{
+                            text-decoration: none;
+                            color: #333;
+                            font-size: 16px;
+                        }
+                        p{
+                            color: #333;
+                            font-size: 16px;
+                        }
+                        p.genre{
+                            color: darkgray;
+                        }
+                    }
+                    .button_box{
+                        width: 530px;
+                        height: 24px;           
+                        display: flex;
+                        justify-content: space-between;
+                        .button{
+                            background-color: transparent;
+                            border: 0px none;
+                            color: #333;
+                            font-size: 16px;
+                            border-radius: 10px;
+                        }
+                        .button:hover{
+                            background-color: red;
+                            color: white;
+                            transition: 0.2s;
+                        }
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,81 @@
+<div class="show_page">
+    <div class="post">
+        <div class="user_box">
+            <div class="user_field">
+                <div class="image_box">
+                    <%= image_tag @post.user.image_url, class: "rounded-circle", size: "48x48" if @post.user.image? %>
+                </div>
+                <div class="info_box">
+                    <p><%= @post.user.name %></p>
+                    <p><%= @post.user.university %></p>
+                </div>
+            </div>
+        </div>
+        <div class="post_box">
+            <div class="doc_box">
+                <p><%= @post.genre %></p>
+                <p><%= @post.title %></p>
+                <p><%= @post.question %></p>
+            </div>
+            <div class="image_box">
+                <p><%= @post.image %></p>
+            </div>
+        
+            <div class="heart_box">
+                <% if user_signed_in? %>
+                    <% if current_user.already_liked?(@post) %>
+                        <%= link_to post_like_path(@post), method: :delete do %>
+                            <i class="fas fa-heart"></i><%= @post.likes.count %>
+                        <% end %>
+                    <% else %>
+                    <%= link_to post_likes_path(@post), method: :post do %>
+                        <i class="far fa-heart"></i><%= @post.likes.count %>
+                    <% end %>
+                    <% end %>
+                <% else %>
+                    <i class="far fa-heart"></i><%= @post.likes.count %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+
+    <div class="comment">
+        <h2>いいねしたユーザー</h2>
+        <% @post.liked_users.each do |user| %>
+            <p><%= user.name %></p>
+        <% end %>
+
+        <div class="comment-wrapper">
+            <p>コメント</p>
+            <div class="comment_history">
+                <% @comments.each do |c| %>
+                    <div class="image_box">
+                        <%= c.user.image %>
+                    </div>
+                    <div class="comment_field">
+                        <div class="user_box">
+                            <%= c.user.name unless c.user.blank? %>
+                            <%= c.user.university %>
+                        </div>
+                        <div class="comment">
+                            <%= c.content %>
+                        </div>
+                    </div>
+            </div>
+        <% end %>
+            <div class="create_comment">
+                <% if user_signed_in? %>
+                    <%= form_with(model: [@post, @comment], local: true) do |f| %>
+                    <%= f.text_area :content, class: "form", :placeholder => "コメント" %>
+                    <%= button_tag type: "submit" do %>
+                        <i class="far fa-comments"></i> コメントする
+                    <% end %>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+
+    <%= link_to "投稿一覧に戻る", posts_path %>
+    <%= link_to "編集する", edit_post_path(@post.id) %>
+</div>

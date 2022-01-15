@@ -1,0 +1,66 @@
+.edit_page{
+    width: 100%;
+    .edit_field{
+        width: 1322px;
+        height: 938px;
+        background-color: #F8F1E5;    
+        margin: auto;
+        .title_box{
+            width: 1322px;
+            height: 69px;
+            padding-top: 58px;
+            .title_field{
+                width: 64px;
+                height: 19px;
+                margin: auto;
+
+                font-size: 16px;
+                line-height: 16px;
+                color: #92A7B0;
+            }
+        }
+        .form_box{
+            width: 1322px;
+            height: 357px;
+            .form_area{
+                width: 322px;
+                height: 357px;
+                margin-left: 556px;
+                .field{
+                    margin-bottom: 48px;
+                    .select{
+                        width: 210px;
+                        height: 29px;
+                    }
+                    .form{
+                        width: 210px;
+                        height: 29px;
+                        border: 0px none;
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
+                    .question{
+                        width: 322px;
+                        height: 91px;
+                        border: 0px none;
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
+                    .button{
+                        width: 173px;
+                        height: 30px;
+                        background-color: #F9BA32;
+                        border-radius: 10px;
+                        border: 2px solid #F9BA32;
+                    }
+                    .button:hover{
+                        background-color: #fff;
+                        border-color: #F9BA32;
+                        color: #F9BA32;
+                        transition: all 0.2s;
+                    }
+                }
+            }
+        }  
+    }
+}

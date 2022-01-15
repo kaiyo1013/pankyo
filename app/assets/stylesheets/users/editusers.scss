@@ -1,0 +1,86 @@
+.edit_page{
+    width: 100%;
+    padding-top: 43px;
+    .edit_box{
+        margin: auto;
+        background-color: #F8F1E5;
+        width: 1322px;
+        .title_box{
+            width: 1322px;
+            height: 85px;
+            padding-top: 17px;
+
+            text-align: center;
+            font-size: 16px;
+            color: #708F9E;
+        }
+        .form_box{
+            width: 1322px;
+            height: 516px;
+            .form_field{
+                width: 322px;
+                height: 516px;
+                margin-left: 556px;
+            }
+            .field{
+                width: 350px;
+                height: 29px;
+                margin-bottom: 46px;
+                .form{
+                    width: 210px;
+                    height: 29px;
+                    
+                    border: 0px none;
+                    font-size: 16px;
+                    line-height: 29px;
+                }
+            }
+            .field1{
+                width: 322px;
+                height: 91px;
+                margin-bottom: 46px;
+                .form{
+                    width: 322px;
+                    height: 91px; 
+                    
+                    font-size: 16px;
+                    border: 0px none;
+                    line-height: 29px;
+                }
+            }
+        }
+        .button_box{
+            width: 1322px;
+            height: 324px;
+            .button_field{
+                width: 283px;
+                height: 324px;
+                margin: auto;
+                .field{
+                    width: 283px;                   
+                    height: 30px;
+                    margin-bottom: 46px;
+                    text-align: center;
+                    .form{
+                        width: 173px;
+                        height: 30px;
+                        background-color: #F9BA32;
+                        font-size: 20px;
+                        line-height: 30px;
+                        border: 0px none;
+                        border-radius: 10px;
+                    }
+                    .form1{
+                        width: 250px;
+                        height: 30px;
+                        background-color: red;
+                        font-size: 20px;
+                        line-height: 30px;
+                        border: 0px none;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

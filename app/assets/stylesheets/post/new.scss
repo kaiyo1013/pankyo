@@ -1,0 +1,81 @@
+.new_page{
+    width: 100%;
+    .new_field{
+        width: 1322px;
+        height: 938px;
+        background-color: #F8F1E5;
+        margin: auto;
+        .title_box{
+            width: 1322px;
+            height: 67px;  
+            padding-top: 46px;
+            .title_field{
+                color: #92A7B0;
+                margin: auto;
+            }
+        }
+        .form_box{
+            width: 1322px;
+            height: 496px;           
+            .form_field{
+                width: 331px;
+                height: 496px;
+                margin-left: 556px;
+                .field{
+                    width: 210px;
+                    height: 29px;
+                    margin-bottom: 48px;
+                    .form{
+                        width: 230px;
+                        height: 29px;
+                        border: 0px none;
+
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
+                }
+                .field1{
+                    width: 322px;
+                    height: 91px;
+                    margin-bottom: 20px;
+                    .form{
+                        width: 322px;
+                        height: 91px;
+                        border: 0px none;
+
+                        font-size: 16px;
+                        line-height: 29px;
+                    }
+                }
+            }
+            .button_field{
+                width: 331px;
+                height: 210px;
+                .field{
+                    width: 281px;
+                    height: 30px;
+                    text-align: center;
+                    .button{
+                        width: 173px;
+                        height: 30px;
+                        border: 0px none;
+                        border-radius: 10px;
+                        background-color: #F9BA32;
+                        border: 2px solid #F9BA32;
+                    }
+                    .button:hover{
+                        background-color: #fff;
+                        border-color: #F9BA32;
+                        color: #F9BA32;
+                        transition: all 0.2s;
+                    }
+                    .link{
+                        text-decoration: none;
+                        color: #817D77;
+                        font-size: 16px;
+                    }
+                }
+                }
+        }
+    }
+}

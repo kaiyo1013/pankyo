@@ -1,0 +1,54 @@
+<div class="hello_page">
+
+    <div class="second_box">
+        <div class="background_box">
+            <div class="icon_box">
+                <div class="image_box">
+                    <img src="../../assets/icon.png" alt="テキスト", width="114px", height="101px", class="icon_image">
+                </div>
+                <div class="title_box">
+                    Pankyo
+                </div>
+            </div>
+            <div class="jpeg_box">
+                <img src="../../assets/study.jpeg" alt="テキスト", width="1073px", height="417px", class="university_image">
+            </div>
+        </div>
+    </div>
+
+    <div class="first_box">
+        <div class="message_box">
+            <p>大学の一般教養の疑問</p>
+            <p>ここで解決</p>
+        </div>
+        <div class="button_box">
+            <div class="post_box">
+                    <%= button_to "投稿を見る", posts_path, class: "button" %>
+            </div>
+            <div class="login_box">
+                <%= button_to "ログインする", new_user_session_path, class: "button" %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="third_box">
+        <div class="title">
+            一般教養の単位取得の助けに
+        </div>
+        <div class="comment1">
+            <p>専門分野の勉強で忙しい！</p>
+            <p>一般教養の講義で高校時代に学習していない分野が出てきて理解できない...</p>
+            <p>そんな人は質問を投稿しましょう！</p>
+        </div>
+        <div class="comment2">
+            <p>「この分野、自分の専攻だ」</p>
+            <p>「この質問なら答えられる！」</p>
+            <p>こんな人は質問に答えてあげましょう！</p>
+            <p>参考書やサイトの紹介でもOKです！</p>
+        </div>
+        <div class="button_box">
+            <%= button_to "ログインする", new_user_session_path, class: "button" %>
+        </div>
+    </div>
+</div>
+

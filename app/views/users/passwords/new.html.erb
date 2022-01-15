@@ -1,0 +1,26 @@
+<div class="forgotpasswordpage">
+  <div class="pagefield">
+    <div class="titlebox">
+      <div class="titlefield">
+        パスワードをお忘れですか?
+      </div>
+    </div>
+    <div class="formbox">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "users/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "メールアドレス", class: "fieldbox" %>
+        </div>
+    </div>
+    <div class="buttonbox">
+      <div class="buttonfield">
+        <div class="actions">
+          <%= f.submit "メールアドレスにメッセージを送る", class: "sendbutton" %>
+          <% end %>
+        </div>
+        <%= render "users/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

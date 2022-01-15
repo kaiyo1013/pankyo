@@ -1,0 +1,29 @@
+<div class="edit_page">
+    <div class="edit_field">
+        <div class="title_box">
+            <div class="title_field">
+                投稿編集
+            </div>
+        </div>
+        <div class="form_box">
+            <div class="form_area">
+                <%= form_for @post do |f| %>
+                    <div class="form_field">
+                        <div class="field">
+                            <%= f.select :genre, [["文系", "文系"], ["理系", "理系"]], {include_blank: "選択してください"}, {class: 'select'} %> <br />
+                        </div>
+                        <div class="field">
+                            <%= f.text_field :title, :size => 40, class: "form", :placeholder => "タイトル" %> <br />
+                        </div>
+                        <div class="field">
+                            <%= f.text_area :question, class: "question", :placeholder => "質問内容" %>
+                        </div>
+                        <div class="field">
+                            <%= f.submit "編集する", class: "button" %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

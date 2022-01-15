@@ -1,0 +1,35 @@
+<div class="new_page">
+  <div class="new_field">
+    <div class="title_box">
+      <div class="title_field">
+        新規投稿
+      </div>
+    </div>
+    <div class="form_box">
+      <div class="form_field">
+        <%= form_for @post do |f| %>
+          <div class="field">
+            <%= f.select :genre, [["文系", "文系"], ["理系", "理系"]], {include_blank: "ジャンルを選択してください"}, {class: "form"} %>
+          </div>
+          <div class="field">
+            <%= f.text_field :title,size: 30, class: "form", :placeholder => "タイトル" %>
+          </div>
+          <div class="field1">
+            <%= f.text_area :question, class: "form", :placeholder => "質問内容" %>
+          </div>
+        <div class="button_field">
+          <div class="field">
+            <%= f.file_field :image %>
+          </div>
+          <div class="field">
+            <%= f.submit "投稿する", class: "button" %>
+          </div>
+          <div class="field">
+            <%= link_to "投稿一覧に戻る", posts_path, class: "link" %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

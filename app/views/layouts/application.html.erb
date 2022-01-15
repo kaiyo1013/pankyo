@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pankyo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <div class="title_box">
+      <div class="icon_box">
+        <img src="../../assets/icon.png" alt="テキスト", width="46px", height="43px", class="icon_image">
+      </div>
+      <h1>pankyo</h1>
+    </div>
+    <div class="header-list">
+    <ul>
+      <li><%= link_to "新規投稿", new_post_path %></li>
+      <li><%= link_to "ホーム", hello_index_path %></li>
+      <li><%= link_to "投稿一覧", posts_path %></li>
+      <% if user_signed_in? %>
+      <li><%= link_to "マイページ", user_path(current_user.id) %></li>
+      <% end %>
+      <li><%= link_to "ログアウト", user_registration_path, method: :delete %></li>
+    </ul>
+    </div>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <p>Copyright ©︎ Kaiyo Tominaga All Rights Researved.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<div class="mypage">
+    <div class="user_box">
+        <div class="image_box">
+            <%= image_tag @user.image_url, class: "rounded-circle", size: "280x280" if @user.image? %>
+        </div>
+        <div class="user2_box">
+        <div class="field">
+            <div class="info_box">
+                <div class="name">
+                    <p><%= @user.name %></p>
+                </div>
+                <div class="university">
+                    <p><%= @user.university %></p>
+                </div>
+                <div class="email_box">
+                    <p><%= @user.email %></p>
+                </div>
+            </div>
+            <div class="button_box">
+                <% if current_user.id == @user.id %>
+                    <%= button_to "プロフィールを編集", edit_user_registration_path, method: :get, class: "button" %>
+                <% end %>
+            </div>
+        </div>
+        <div class="profile_box">
+            <p>プロフィール : <%= @user.profile %></p>
+        </div>
+        </div>
+    </div>
+    <div class="history_box">
+        <div class="history_field">
+            <div class="title">
+                <p>投稿履歴</p>
+            </div>
+                <% @user.posts.each do |t| %>
+            <div class="post_box">
+                <p class="genre"><%= t.genre %></p>
+                <p><%= t.title %></p>
+                <p><%= t.question %></p>
+                <p><%= image_tag t.image_url, size: "250x200" if t.image? %></p>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>

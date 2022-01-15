@@ -1,0 +1,100 @@
+.mypage{
+    width: 100%;
+    .user_box{
+        width: 100%;
+        height: 557px;
+        background-color: #2F3131;
+        display: flex;
+        .image_box{
+            width: 280px;
+            height: 280px;
+            margin-top: 139px;
+            margin-left: 96px;
+            margin-right: 80px;
+            border-radius: 50%;
+            .rounded-circle{
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .user2_box{
+            width: 797px;
+            height: 379px;
+            margin-top: 92px;
+            .field{
+                width: 797px;
+                height: 233px; 
+                display: flex;
+                .info_box{
+                    width: 621px;
+                    height: 181px;
+                    .name{
+                        font-size: 36px;
+                        line-height: 42px;
+                        color: white;
+                    }
+                    .email_box{
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-top: 36px;
+                        color: rgba(177, 177, 177, 0.5);
+                    }
+                    .university{
+                        font-size: 20px;
+                        line-height: 19px;
+                        margin-top: 36px;
+                        color: white;
+                    }
+                }
+                .button_box{
+                    width: 176px;
+                    height: 34px;
+                    .button{
+                        width: 144px;
+                        height: 23px;
+                        border: 0px none;
+                        text-align: center;
+                        border-radius: 20px;
+                        border: 2px solid white;
+                        transition: all 0.2s;
+                    }
+                    .button:hover{
+                        background-color: #444;
+                        border-color: #444;
+                        color: white;
+                    }
+                }
+            }
+            .profile_box{
+                width: 797px;
+                height: 146px;
+                background-color: wheat;
+            }
+        }
+        
+    }
+    .history_box{
+        width: 100%;
+        .history_field{
+            width: 600px;
+            margin: auto;
+            margin-top: 17px;
+            margin-bottom: 60px;
+            .title{
+                width: 600px;
+                height: 32px;
+                margin: auto;
+                border-bottom: solid 1px #333;
+            }
+            .post_box{
+                width: 600px;
+                border-bottom: solid 1px #333;
+                p.genre{
+                    color: darkgray;
+                }
+            }
+        }
+        
+        
+    }
+}
