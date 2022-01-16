@@ -27,7 +27,7 @@
       <% if user_signed_in? %>
       <li><%= link_to "マイページ", user_path(current_user.id) %></li>
       <% end %>
-      <li><%= link_to "ログアウト", user_registration_path, method: :delete %></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
     </ul>
     </div>
   </header>
