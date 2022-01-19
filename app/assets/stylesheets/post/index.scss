@@ -95,7 +95,7 @@
                         height: 24px;           
                         display: flex;
                         justify-content: space-between;
-                        .button{
+                        .button1{
                             background-color: transparent;
                             border: 0px none;
                             color: #333;
@@ -103,7 +103,31 @@
                             border-radius: 10px;
                             text-decoration: none;
                         }
-                        .button:hover{
+                        .button1:hover{
+                            background-color: red;
+                            color: white;
+                            transition: 0.2s;
+                        }
+                        .button2{
+                            background-color: transparent;
+                            border: 0px none;
+                            color: #333;
+                            font-size: 16px;
+                            border-radius: 10px;
+                            text-decoration: none;
+                        }.button2:hover{
+                            background-color: red;
+                            color: white;
+                            transition: 0.2s;
+                        }
+                        .button3{
+                            background-color: transparent;
+                            border: 0px none;
+                            color: #333;
+                            font-size: 16px;
+                            border-radius: 10px;
+                            text-decoration: none;
+                        }.button3:hover{
                             background-color: red;
                             color: white;
                             transition: 0.2s;

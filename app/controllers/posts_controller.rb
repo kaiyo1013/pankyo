@@ -3,12 +3,13 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:edit, :update, :show, :destory, :new, :create]
   
   def index
-      if params[:search] == nil
-        @posts = Post.all.page(params[:page]).per(10)
-    elsif params[:search] == ''
-        @posts = Post.all.page(params[:page]).per(10)
-    else
+      if params[:search] != nil && params[:search] != ""
         @posts = Post.where("question LIKE ? ",'%' + params[:search] + '%').page(params[:page]).per(10)
+    elsif params[:genre] != nil && params[:genre] != ""
+        @posts = Post.where("question LIKE ? ",'%' + params[:genre] + '%').page(params[:page]).per(10)
+    else
+        @posts = Post.all.page(params[:page]).per(10)
+
     end
     end
 
