@@ -47,35 +47,36 @@
                         line-height: 29px;
                     }
                 }
-            }
-            .button_field{
-                width: 331px;
-                height: 210px;
-                .field{
-                    width: 281px;
-                    height: 30px;
-                    text-align: center;
-                    .button{
-                        width: 173px;
+                .button_field{
+                    width: 331px;
+                    height: 210px;
+                    .field{
+                        width: 281px;
                         height: 30px;
-                        border: 0px none;
-                        border-radius: 10px;
-                        background-color: #F9BA32;
-                        border: 2px solid #F9BA32;
-                    }
-                    .button:hover{
-                        background-color: #fff;
-                        border-color: #F9BA32;
-                        color: #F9BA32;
-                        transition: all 0.2s;
-                    }
-                    .link{
-                        text-decoration: none;
-                        color: #817D77;
-                        font-size: 16px;
+                        text-align: center;
+                        .button{
+                            width: 173px;
+                            height: 30px;
+                            border: 0px none;
+                            border-radius: 10px;
+                            background-color: #F9BA32;
+                            border: 2px solid #F9BA32;
+                        }
+                        .button:hover{
+                            background-color: #fff;
+                            border-color: #F9BA32;
+                            color: #F9BA32;
+                            transition: all 0.2s;
+                        }
+                        .link{
+                            text-decoration: none;
+                            color: #817D77;
+                            font-size: 16px;
+                        }
                     }
                 }
-                }
+            }
+            
         }
     }
 }

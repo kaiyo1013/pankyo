@@ -12,23 +12,23 @@
             <%= f.select :genre, [["文系", "文系"], ["理系", "理系"]], {include_blank: "ジャンルを選択してください"}, {class: "form"} %>
           </div>
           <div class="field">
-            <%= f.text_field :title,size: 30, class: "form", :placeholder => "タイトル" %>
+            <%= f.text_field :title, size: 30, class: "form", :placeholder => "タイトル" %>
           </div>
           <div class="field1">
             <%= f.text_area :question, class: "form", :placeholder => "質問内容" %>
           </div>
-        <div class="button_field">
-          <div class="field">
-            <%= f.file_field :image %>
+          <div class="button_field">
+            <div class="field">
+              <%= f.file_field :image %>
+            </div>
+            <div class="field">
+              <%= f.submit "投稿する", class: "button" %>
+            </div>
+            <div class="field">
+              <%= link_to "投稿一覧に戻る", posts_path, class: "link" %>
+            </div>
+            <% end %>
           </div>
-          <div class="field">
-            <%= f.submit "投稿する", class: "button" %>
-          </div>
-          <div class="field">
-            <%= link_to "投稿一覧に戻る", posts_path, class: "link" %>
-          </div>
-          <% end %>
-        </div>
       </div>
     </div>
   </div>

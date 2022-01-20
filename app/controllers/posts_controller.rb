@@ -2,15 +2,14 @@ class PostsController < ApplicationController
   
   before_action :authenticate_user!, only: [:edit, :update, :show, :destory, :new, :create]
   
-  def index
-      if params[:search] != nil && params[:search] != ""
-        @posts = Post.where("question LIKE ? ",'%' + params[:search] + '%').page(params[:page]).per(10)
-    elsif params[:genre] != nil && params[:genre] != ""
-        @posts = Post.where("question LIKE ? ",'%' + params[:genre] + '%').page(params[:page]).per(10)
-    else
-        @posts = Post.all.page(params[:page]).per(10)
-
-    end
+    def index
+        if params[:search] != nil && params[:search] != ""
+          @posts = Post.where("question LIKE ? ",'%' + params[:search] + '%').page(params[:page]).per(10)
+      elsif params[:genre] != nil && params[:genre] != ""
+          @posts = Post.where("question LIKE ? ",'%' + params[:genre] + '%').page(params[:page]).per(10)
+      else
+          @posts = Post.all.page(params[:page]).per(10)
+      end
     end
 
     def new
@@ -25,7 +24,6 @@ class PostsController < ApplicationController
         else
           redirect_to action: "new"      
         end
-        
     end
 
     def show
@@ -56,6 +54,6 @@ class PostsController < ApplicationController
   
     private
     def post_params
-        params.permit(:title, :genre, :question, :image)
+        params.require(:post).permit(:title, :genre, :question, :image)
     end
 end
